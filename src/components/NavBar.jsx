@@ -25,10 +25,10 @@ const login  = localStorage.getItem('login')
             <Nav.Link as={Link} to="/login">Login</Nav.Link>
           </Nav>
          
-    {login?<><i className="fa-solid fa-right-from-bracket text-white" style={{cursor:'pointer'}} onClick={logout}></i></>:<></>}
         </Navbar.Collapse>  
         
       </Container >
+    {login?<><i className="fa-solid fa-right-from-bracket text-white" style={{cursor:'pointer'}} onClick={logout}></i></>:<></>}
     </Navbar>
   );
 }
