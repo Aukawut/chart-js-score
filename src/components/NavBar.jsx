@@ -2,12 +2,15 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 function NavBar() {
+  const navigate = useNavigate()
 const login  = localStorage.getItem('login')
   const logout = () => {
     localStorage.removeItem("token")
     localStorage.removeItem("token_user")
     localStorage.removeItem("login")
+    navigate('/login')
   }
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
