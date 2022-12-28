@@ -45,6 +45,7 @@ export default function Login() {
         })
         localStorage.setItem('token',res.data.token)
         localStorage.setItem('token_user',res.data.token_user)
+        localStorage.setItem('login',true)
       }else{
         Swal.fire({
           icon:'error',
