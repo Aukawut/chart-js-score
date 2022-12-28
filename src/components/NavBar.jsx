@@ -4,6 +4,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 function NavBar() {
+  const logout = () => {
+    localStorage.removeItem("token")
+    localStorage.removeItem("token_user")
+  }
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container fluid>
@@ -16,7 +20,9 @@ function NavBar() {
             <Nav.Link as={Link} to="/admin">Admin</Nav.Link>
             <Nav.Link as={Link} to="/login">Login</Nav.Link>
           </Nav>
+         
         </Navbar.Collapse>
+        <i className="fa-solid fa-right-from-bracket text-white" style={{cursor:'pointer'}} onClick={logout}></i>
       </Container >
     </Navbar>
   );
