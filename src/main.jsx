@@ -8,7 +8,7 @@ import Report from './components/Report'
 import ShowData from './components/ShowData'
 import Login from './components/Login'
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename='/chart-js-score'>
+  <BrowserRouter>
   <NavBar/>
   <Routes>
     
